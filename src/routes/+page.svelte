@@ -181,4 +181,35 @@
     .swiper-pagination{
     
     }
+
+    @media (max-width: 768px){
+        .heroChris img {
+            background-image: url("/hero.png");
+            max-width: 5000px;
+        }
+        .UnderstandingNumbersTextColor{
+            font-size: 34px;
+        }
+        .stat-title {
+            font-size: 16px;
+        }
+        .stat-desc {
+            font-size: 12px;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: #333;
+            width: 50px !important;
+            height: 50px !important;
+            background: rgba(92, 217, 233, 0.8);
+            border-radius: 50%;
+            z-index: 10;
+            bottom: 1px;
+            
+
+        }
+        .swiper-slide {
+            padding: 10px;
+        }
+    }
 </style>
