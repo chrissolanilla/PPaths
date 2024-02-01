@@ -38,6 +38,10 @@
         if(testElement)
             testElement.scrollIntoView({ behavior: 'smooth'});
     }
+
+    function loadStripe(){
+
+    }
 </script>
 
 <Navbar />
@@ -130,7 +134,8 @@
         
     </div>
 
-    <a target="_blank" href="https://mcdonalds.com"><button class="btn btn-primary"> Get Help Now</button> </a> <a href="https://patreon.com" target="_blank"> <button class="btn btn-primary">Support Our Cause</button> </a>
+    <a target="_blank" href="https://mcdonalds.com"><button class="btn btn-primary"> Get Help Now</button> </a>
+    <a href="/checkout" target="_blank"> <button class="btn btn-primary">Support Our Cause</button> </a>
 </section>
 <!-- <section id="baby-pictures">
     <h2>Gallery of Joy</h2>
