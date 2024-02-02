@@ -15,6 +15,7 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal p-0">
+        <li class="chrisTest font-bold"> <a on:click={() => scrollToSection('#about-us')}> About Us</a></li>
         <li class="chrisTest font-bold"><a on:click={() => scrollToSection('#statistics')}>Statistics</a></li>
         <li class="chrisTest font-bold"><a on:click={() => scrollToSection('#testimonials')}>Testimonials</a></li>
         <!-- Add more menu items here -->
