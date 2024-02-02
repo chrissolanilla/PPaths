@@ -1,13 +1,15 @@
-const stripe = require('stripe')('sk_test_51OeqN5EwXphNG6f7UohuvduSeCr2FrNix8Is5tAlbMp9pOaIwlxQjMwvtmycf6tV6KpEdJPIL574Z0GfkxIPIQTp00Yc2Dn1SW');
+require('dotenv').config(); // This should be at the very top
+const stripe = require('stripe')(process.env.STRIPE_SECRETE);
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
 const cors = require('cors');
-app.use(cors({ origin: 'http://localhost:5173' })); // Adjust the port if needed
+app.use(cors({ origin: process.env.CORS_ORIGIN })); // Adjust the port if needed
 
 
-const YOUR_DOMAIN = 'http://localhost:5173/';
+const PORT = process.env.PORT;
+const YOUR_DOMAIN = process.env.YOUR_DOMAIN;
 
 app.use(express.json()); // This needs to be above your route definitions
 
@@ -36,4 +38,4 @@ app.post('/create-checkout-session', async (req, res) => {
     res.json({ url: session.url });
   });
 
-app.listen(4242, () => console.log('Running on port 4242'));
+app.listen(PORT, () => console.log('Running on port,', PORT));

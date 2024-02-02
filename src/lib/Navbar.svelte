@@ -11,13 +11,20 @@
   
   <nav class="navbar bg-yellow-100 flex items-center">
     <div class="flex items-center justify-center">
-      <a class="btn btn-ghost normal-case text-xl font-bold chrisClass">Pregnancy Paths</a>
+      <button class="btn btn-ghost normal-case text-xl font-bold chrisClass">Pregnancy Paths</button>
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal p-0">
-        <li class="chrisTest font-bold"> <a on:click={() => scrollToSection('#about-us')}> About Us</a></li>
-        <li class="chrisTest font-bold"><a on:click={() => scrollToSection('#statistics')}>Statistics</a></li>
-        <li class="chrisTest font-bold"><a on:click={() => scrollToSection('#testimonials')}>Testimonials</a></li>
+        <li class="chrisTest font-bold">
+          <!-- Using href="#" and preventDefault to avoid page jump -->
+          <a href="#" on:click|preventDefault={() => scrollToSection('#about-us')} tabindex="0">About Us</a>
+        </li>
+        <li class="chrisTest font-bold">
+          <a href="#" on:click|preventDefault={() => scrollToSection('#statistics')} tabindex="0">Statistics</a>
+        </li>
+        <li class="chrisTest font-bold">
+          <a href="#" on:click|preventDefault={() => scrollToSection('#testimonials')} tabindex="0">Testimonials</a>
+        </li>
         <!-- Add more menu items here -->
       </ul>
     </div>

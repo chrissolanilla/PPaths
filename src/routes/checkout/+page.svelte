@@ -1,8 +1,11 @@
 <script>
     let amount = 20; // Default amount or minimum amount
-  
+    let backendURL = import.meta.env.VITE_BACKEND_URL;
+    
+    backendURL+='/create-checkout-session'
+    console.log(backendURL);
     async function handleCheckout() {
-      const response = await fetch('api/create-checkout-session', {
+      const response = await fetch(backendURL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
