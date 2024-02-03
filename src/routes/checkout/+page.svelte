@@ -1,8 +1,8 @@
 <script>
     let amount = 20; // Default amount or minimum amount
-    let backendURL = import.meta.env.VITE_BACKEND_URL;
-    
-    backendURL+='/create-checkout-session'
+    let backendURL = import.meta.env.VITE_BACKEND_URL; // Ensure this doesn't end with a slash
+    backendURL += '/create-checkout-session'; // Correctly append the endpoint
+
     console.log(backendURL);
     async function handleCheckout() {
       const response = await fetch(backendURL, {

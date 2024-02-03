@@ -7,7 +7,30 @@
     import Testimonials from "$lib/Testimonials.svelte";
     import Statistics from '$lib/Statistics.svelte'
     import WhoWeAre from '$lib/WhoWeAre.svelte'
+    import { onMount } from 'svelte';
+
     let babyImageUrl = './baby.png'
+
+    let observer;
+    
+    onMount(() => {
+        if ('IntersectionObserver' in window) {
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            });
+
+            const hiddenElements = document.querySelectorAll('.hiddenChris');
+            
+            hiddenElements.forEach((el) => observer.observe(el));
+        }
+    });
+
     
 
     function scrollToContent() {
@@ -19,7 +42,7 @@
 
 <Navbar />
 <!--He wants a baby picture on the right and text on the left with a big button in between to donate and a smaller button below to learn more-->
-<div class="heroContainerChris">
+<div class="heroContainerChris hiddenChris">
 
 
     <div class="heroChris min-h-screen flex items-center justify-center">
@@ -151,5 +174,36 @@
         /* Other styles remain unchanged */
         animation: pulse 10s infinite; /* 10s for the full cycle including the pause */
     }
+
+    :global(.hiddenChris) {
+        opacity: 0;
+        transition: all 0.5s;
+        filter:blur(5px);
+        transform: translateX(-100%);
+    }
+    :global(.show) {
+        opacity: 1;
+        filter:blur(0);
+        transform: translateX(0);
+    }
+/* Staggered animations for each child */
+    :global(.statChild) {
+        opacity: 0; /* Start hidden */
+        transform: translateX(-100%);
+        transition: opacity 0.5s, transform 0.5s; /* Base transition */
+    }
+    :global(.show .statChild) {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    :global(.show .statChild:nth-child(1)) { transition-delay: 0.2s; }
+    :global(.show .statChild:nth-child(2)) { transition-delay: 0.4s; }
+    :global(.show .statChild:nth-child(3)) { transition-delay: 0.6s; }
+    :global(.show .statChild:nth-child(4)) { transition-delay: 0.8s; }
+    :global(.show .statChild:nth-child(5)) { transition-delay: 1.0s; }
+    :global(.show .statChild:nth-child(6)) { transition-delay: 1.2s; }
+    :global(.show .statChild:nth-child(7)) { transition-delay: 1.4s; }
+    :global(.show .statChild:nth-child(8)) { transition-delay: 1.6s; }
+    :global(.show .statChild:nth-child(9)) { transition-delay: 1.8s; }
 
 </style>

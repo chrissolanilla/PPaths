@@ -29,7 +29,7 @@
     }
 </script>
 <!-- Testimonials Section -->
-<section id="testimonials" class="bg-gray-50 text-center py-10">
+<section id="testimonials" class="bg-gray-50 text-center py-10 hiddenChris">
     <h1 class="text-8xl mb-10 UnderstandingNumbersTextColor font-bold">Stories of Impact</h1>
     
     <!-- Swiper -->

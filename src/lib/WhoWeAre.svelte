@@ -2,7 +2,7 @@
     // If you have any script-specific functionality for the "About Us" section, you can add it here.
 </script>
 
-<section id="about-us" class="flex flex-wrap items-center py-10">
+<section id="about-us" class="flex flex-wrap items-center py-10 hiddenChris">
     <div class="w-full md:w-1/4">
         <figure>
             <img src="gracelogo.png" alt="About Us" class="w-full h-auto rounded-lg shadow-lg bg-slate-500">

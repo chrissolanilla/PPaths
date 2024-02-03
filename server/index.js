@@ -6,6 +6,7 @@ app.use(express.static('public'));
 
 const cors = require('cors');
 app.use(cors({ origin: process.env.CORS_ORIGIN })); // Adjust the port if needed
+console.log('test');
 
 
 const PORT = process.env.PORT;
