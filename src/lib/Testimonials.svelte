@@ -81,7 +81,7 @@
         
     </div>
 
-    <a target="_blank" href="https://mcdonalds.com"><button class="btn btn-secondary"> Get Help Now</button> </a>
+    <a target="_blank" href="https://gracewomenscarecenter.org/"><button class="btn btn-secondary"> Get Help Now</button> </a>
     <a href="/checkout" target="_blank"> <button class="btn btn-accent">Support Our Cause</button> </a>
     <button class="btn btn-primary" on:click={scrollToContent}>See Our Impact</button>
 </section>

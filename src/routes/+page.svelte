@@ -228,6 +228,7 @@
         display: flex;
         flex-direction: column;
         align-items: center; /* Center-align the content */
+        margin-bottom: 0;
     }
 
     .heroTextColor {
@@ -236,19 +237,20 @@
     }
 
     .buttons-container {
-        margin-top: 0px; /* Add some space above the buttons */
+        margin-top: 0; /* Add some space above the buttons */
     }
 
-    .btn-primary, .btn-secondary {
+    .btn-secondary {
         font-size: 1.5rem; /* Smaller font size for buttons */
-        padding: 10px 20px; 
-        padding-bottom: 1px;
+        padding-top: 10px; 
+        margin-bottom: 0;
         
     }
     .btn-primary{
-        transform: translateY(-2000px);
+        
         margin-bottom: 100px;
         font-size: 3rem;
+        margin-top: -20px;
     }
 
     .centerArrow {
