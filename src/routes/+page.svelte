@@ -206,4 +206,64 @@
     :global(.show .statChild:nth-child(8)) { transition-delay: 1.6s; }
     :global(.show .statChild:nth-child(9)) { transition-delay: 1.8s; }
 
+    
+    @media (max-width: 768px) {
+    .heroContainerChris {
+        /* Adjust padding and flex direction for smaller screens */
+        padding: 10px;
+        flex-direction: column;
+        text-align: center; /* Center text for mobile */
+    }
+
+    .heroChris {
+        /* Stack elements vertically and adjust alignment */
+        flex-direction: column;
+        align-items: center;
+        padding: 0; /* Remove any left/right padding */
+    }
+
+    .heroChris .flex-1 {
+        width: 100%; /* Full width for child elements */
+        padding: 10px 0; /* Add some vertical spacing */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center-align the content */
+    }
+
+    .heroTextColor {
+        font-size: 3rem; /* Smaller font size for the headline */
+        text-align: center; /* Center-align the text */
+    }
+
+    .buttons-container {
+        margin-top: 0px; /* Add some space above the buttons */
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 1.5rem; /* Smaller font size for buttons */
+        padding: 10px 20px; 
+        padding-bottom: 1px;
+        
+    }
+    .btn-primary{
+        transform: translateY(-2000px);
+        margin-bottom: 100px;
+        font-size: 3rem;
+    }
+
+    .centerArrow {
+        
+    }
+
+    /* Adjust image size and alignment */
+    .heroChris img {
+        max-width: 80%; /* Limit image size */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: -100px; /* Add some space above the image */
+        transform: translateY(-170px);
+        
+    }
+}
+
+
 </style>
